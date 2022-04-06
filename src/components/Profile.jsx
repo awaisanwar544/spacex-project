@@ -28,21 +28,20 @@ const Wrapper = styled.div`
 
 const Profile = () => {
   const rockets = useSelector((state) => state.rockets);
-  const booked = rockets.filter((item) => {
-    if (item.reserved === true) {
-      return item;
-    }
-    return '';
-  });
+  const booked = rockets.filter((item) => item.reserved);
+
+  const missions = useSelector((state) => state.missionsReducer);
+  const joined = missions.filter((mission) => mission.missionStatus);
+
   return (
     <Wrapper>
       <div>
         <h2>My Missions</h2>
         <table>
           <tbody>
-            {booked.map((item) => (
-              <tr key={item.id}>
-                <td>{item.rocket_name}</td>
+            {joined.map((item) => (
+              <tr key={item.missionId}>
+                <td>{item.missionName}</td>
               </tr>
             ))}
           </tbody>
