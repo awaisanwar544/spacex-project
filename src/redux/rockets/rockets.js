@@ -38,20 +38,32 @@ export const cancelReservation = (id) => ({
 // Reducer
 const rocketReducer = (state = initialState, action = {}) => {
   if (action.type === FETCH_ROCKETS) {
-    return [...state, ...action.payload];
+    return [...action.payload];
   }
 
   if (action.type === RESERVE_ROCKET) {
-    const id = action.rocketId - 1;
-    const newState = [...state];
-    newState[id].reserved = action.payload;
+    const id = action.rocketId;
+    const newState = state.map((item) => {
+      if (item.id === id) {
+        const temp = item;
+        temp.reserved = action.payload;
+        return temp;
+      }
+      return item;
+    });
     return [...newState];
   }
 
   if (action.type === CANCEL_RESERVATION) {
-    const id = action.rocketId - 1;
-    const newState = [...state];
-    newState[id].reserved = action.payload;
+    const id = action.rocketId;
+    const newState = state.map((item) => {
+      if (item.id === id) {
+        const temp = item;
+        temp.reserved = action.payload;
+        return temp;
+      }
+      return item;
+    });
     return [...newState];
   }
 
