@@ -1,6 +1,8 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../redux/rockets/rockets';
 
 const Wrapper = styled.div`
   button {
@@ -17,12 +19,24 @@ const Wrapper = styled.div`
   }
 `;
 
-const ReserveButton = ({ id }) => (
+const ReserveButton = ({ id }) => {
+  const dispath = useDispatch();
+  return (
 
-  <Wrapper>
-    <button id={id} type="button">Reserve Rocket</button>
-  </Wrapper>
-);
+    <Wrapper>
+      <button
+        id={id}
+        onClick={() => {
+          dispath(reserveRocket(id));
+        }}
+        type="button"
+      >
+        Reserve Rocket
+
+      </button>
+    </Wrapper>
+  );
+};
 
 ReserveButton.propTypes = {
   id: PropTypes.number.isRequired,
