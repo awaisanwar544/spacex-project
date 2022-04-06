@@ -20,14 +20,14 @@ const Wrapper = styled.div`
 `;
 
 const ReserveButton = ({ id }) => {
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
   return (
 
     <Wrapper>
       <button
         id={id}
         onClick={() => {
-          dispath(reserveRocket(id));
+          dispatch(reserveRocket(id));
         }}
         type="button"
       >

@@ -10,7 +10,7 @@ const Rockets = () => {
     if (rockets.length === 0) {
       dispatch(fetchRockets());
     }
-  }, []);
+  }, [rockets.length]);
   return (
     <div>
       {rockets.map((item) => (
