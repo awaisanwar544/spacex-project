@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { changeMissionStatus } from '../redux/missions/missions';
 
-const Wrapper = styled.div`
+const Wrapper = styled.td`
+  display: flex;
+  column-gap: 1em;
+  padding-top: 2em;
+  border: none !important;
 button {
   background-color: none;
   border: red 2px solid;
@@ -18,11 +22,15 @@ button {
   border-radius: 0.5em;
 }
 p {
+  text-align: center;
   margin: auto;
-  padding 0.1rem;
+  padding: 0.1rem;
   background-color: blue;
   font-size: 12px;
   color: white;
+  width: 10em;
+  border-radius: 0.5em;
+}
 `;
 
 const MissionTrue = ({ id }) => {
@@ -30,10 +38,8 @@ const MissionTrue = ({ id }) => {
 
   return (
     <Wrapper>
-      <td><p>Active Member</p></td>
-      <td>
-        <button type="button" onClick={() => { dispatch(changeMissionStatus(id)); }}>Leave Mission</button>
-      </td>
+      <p>Active Member</p>
+      <button type="button" onClick={() => { dispatch(changeMissionStatus(id)); }}>Leave Mission</button>
     </Wrapper>
   );
 };

@@ -1,7 +1,19 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 import { getMissions } from '../redux/missions/missions';
 import Mission from './Mission';
+
+const Wrapper = styled.table`
+  margin: 1em 2em;
+  border: 1px solid black;
+  border-collapse: collapse;
+
+  th, tr, td {
+    border: 1px solid black;
+    padding: 2rem;
+  }
+`;
 
 const Missions = () => {
   const missions = useSelector((store) => store.missionsReducer);
@@ -10,7 +22,7 @@ const Missions = () => {
     if (missions.length === 0) { dispatch(getMissions()); }
   }, [dispatch]);
   return (
-    <table>
+    <Wrapper>
       <thead>
         <tr>
           <th>Mission</th>
@@ -33,7 +45,7 @@ const Missions = () => {
           );
         })}
       </tbody>
-    </table>
+    </Wrapper>
   );
 };
 export default Missions;
