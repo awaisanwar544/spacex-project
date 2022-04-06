@@ -1,6 +1,8 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { cancelReservation } from '../redux/rockets/rockets';
 
 const Wrapper = styled.div`
   button {
@@ -17,12 +19,23 @@ const Wrapper = styled.div`
   }
 `;
 
-const LeaveButton = ({ id }) => (
+const LeaveButton = ({ id }) => {
+  const dispatch = useDispatch();
+  return (
 
-  <Wrapper>
-    <button id={id} type="button">Cancel Reservation</button>
-  </Wrapper>
-);
+    <Wrapper>
+      <button
+        id={id}
+        onClick={() => {
+          dispatch(cancelReservation(id));
+        }}
+        type="button"
+      >
+        Cancel Reservation
+      </button>
+    </Wrapper>
+  );
+};
 
 LeaveButton.propTypes = {
   id: PropTypes.number.isRequired,
