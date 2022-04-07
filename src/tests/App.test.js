@@ -10,9 +10,16 @@ import RocketCard from '../components/RocketCard';
 import ReserveButton from '../components/ReserveButton';
 import LeaveButton from '../components/LeaveButton';
 import ReserveBadge from '../components/ReserveBadge';
+import Missions from '../components/Missions';
+import Mission from '../components/Mission';
+import MissionTrue from '../components/MissionTrue';
+import MissionFalse from '../components/MissionFalse';
 
 jest.mock('../components/ReserveButton');
 jest.mock('../components/LeaveButton');
+jest.mock('react-redux');
+jest.mock('../components/MissionFalse');
+jest.mock('../components/MissionTrue');
 
 describe('App Components Render Correctly', () => {
   it('Header renders correctly', () => {
@@ -33,9 +40,9 @@ describe('App Components Render Correctly', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('Rocket card renders correctly when reserved is false', () => {
+  it('Rocket card renders correctly when joined is false', () => {
     const tree = renderer.create(
-      <RocketCard id={1} rocketName="" description="" flickrImages="" reserved={false} />,
+      <RocketCard id={1} rocketName="" description="" flickrImages="" joined={false} />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -58,9 +65,9 @@ describe('App Components Render Correctly', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('Rocket card renders correctly when reserved is true', () => {
+  it('Rocket card renders correctly when joined is true', () => {
     const tree = renderer.create(
-      <RocketCard id={1} rocketName="" description="" flickrImages="" reserved />,
+      <RocketCard id={1} rocketName="" description="" flickrImages="" joined />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -68,6 +75,43 @@ describe('App Components Render Correctly', () => {
   it('ReserveBadge renders correctly', () => {
     const tree = renderer.create(
       <ReserveBadge />,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('Missions renders correctly with empty store', () => {
+    const tree = renderer.create(
+      <Provider store={store}>
+        <Missions />
+      </Provider>,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('Mission renders correctly when joined is true', () => {
+    const tree = renderer.create(
+      <Mission missionId="1" missionName="" missionDescription="" missionStatus />,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('Mission renders correctly when joined is false', () => {
+    const tree = renderer.create(
+      <Mission missionId="1" missionName="" missionDescription="" missionStatus={false} />,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('MissionTrue renders correctly', () => {
+    const tree = renderer.create(
+      <MissionTrue id="1" />,
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('MissionFalse renders correctly', () => {
+    const tree = renderer.create(
+      <MissionFalse id="1" />,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

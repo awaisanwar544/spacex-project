@@ -15,19 +15,53 @@
 ## Live Demo
 
 [Live Demo Link](https://awaisanwar544.github.io/spacex-project/)
+## Requisites
+node v16.13
+npm v8.3
 
-## Getting Started
+## Installation
 
-**Follow the steps below to run this project on you local machine**
+Clone the repository: 
 
+`git clone https://github.com/awaisanwar544.spacex-project.git`
 
-To get a local copy up and running follow these simple example steps.
+`cd spacex-project`
 
-### Prerequisites
-- Understanding of git and github
-### Setup & Install
-- Clone repo on your local device using `git clone <link>` command
-- Run `npm install`
+`git checkout dev`
+
+Load required npm software
+
+`npm install`
+
+## Available Scripts
+
+In the project directory, you can run:
+
+`npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+`npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+`npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+`npm run eject`
+
 
 ## Authors
 

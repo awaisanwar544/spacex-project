@@ -49,28 +49,27 @@ exports[`App Components Render Correctly Header renders correctly 1`] = `
 
 exports[`App Components Render Correctly LeaveButton renders correctly 1`] = `null`;
 
-exports[`App Components Render Correctly Profile renders correctly with empty store 1`] = `
-<div
-  className="sc-eCYdqJ vjkub"
->
-  <div>
-    <h2>
-      My Missions
-    </h2>
-    <table>
-      <tbody />
-    </table>
-  </div>
-  <div>
-    <h2>
-      My Rockets
-    </h2>
-    <table>
-      <tbody />
-    </table>
-  </div>
-</div>
+exports[`App Components Render Correctly Mission renders correctly when joined is false 1`] = `
+<tr>
+  <td />
+  <td />
+</tr>
 `;
+
+exports[`App Components Render Correctly Mission renders correctly when joined is true 1`] = `
+<tr>
+  <td />
+  <td />
+</tr>
+`;
+
+exports[`App Components Render Correctly MissionFalse renders correctly 1`] = `null`;
+
+exports[`App Components Render Correctly MissionTrue renders correctly 1`] = `null`;
+
+exports[`App Components Render Correctly Missions renders correctly with empty store 1`] = `null`;
+
+exports[`App Components Render Correctly Profile renders correctly with empty store 1`] = `null`;
 
 exports[`App Components Render Correctly ReserveBadge renders correctly 1`] = `
 <span
@@ -82,7 +81,7 @@ exports[`App Components Render Correctly ReserveBadge renders correctly 1`] = `
 
 exports[`App Components Render Correctly ReserveButton renders correctly 1`] = `null`;
 
-exports[`App Components Render Correctly Rocket card renders correctly when reserved is false 1`] = `
+exports[`App Components Render Correctly Rocket card renders correctly when joined is false 1`] = `
 <div
   className="sc-gsnTZi fBTMkP"
 >
@@ -105,7 +104,7 @@ exports[`App Components Render Correctly Rocket card renders correctly when rese
 </div>
 `;
 
-exports[`App Components Render Correctly Rocket card renders correctly when reserved is true 1`] = `
+exports[`App Components Render Correctly Rocket card renders correctly when joined is true 1`] = `
 <div
   className="sc-gsnTZi fBTMkP"
 >
@@ -122,16 +121,10 @@ exports[`App Components Render Correctly Rocket card renders correctly when rese
   >
     <h3 />
     <p>
-      <span>
-        <span
-          className="sc-bczRLJ UMZIj"
-        >
-          Reserved
-        </span>
-      </span>
+      <span />
     </p>
   </div>
 </div>
 `;
 
-exports[`App Components Render Correctly Rockets renders correctly with empty store 1`] = `<div />`;
+exports[`App Components Render Correctly Rockets renders correctly with empty store 1`] = `null`;
