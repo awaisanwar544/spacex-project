@@ -1,0 +1,10 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import renderer from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom';
+import store from '../redux/configureStore';
+import Missions from '../components/Missions';
+import Mission from '../components/Mission';
+import MissionTrue from '../components/MissionTrue';
+import MissionFalse from '../components/MissionFalse';
+

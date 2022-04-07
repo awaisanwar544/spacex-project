@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Components Render Correctly Header renders correctly 1`] = `
+<div
+  id="navbar"
+>
+  <div>
+    <img
+      alt="logo"
+      id="logo"
+      src="planet.png"
+    />
+  </div>
+  <nav>
+    <li>
+      <a
+        activeclassname="active"
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+      >
+        Rockets
+      </a>
+    </li>
+    <li>
+      <a
+        activeclassname="active"
+        className=""
+        href="/missions"
+        onClick={[Function]}
+      >
+        Missions
+      </a>
+    </li>
+    <li>
+      <a
+        activeclassname="active"
+        className=""
+        href="/profile"
+        onClick={[Function]}
+      >
+        Profile
+      </a>
+    </li>
+  </nav>
+</div>
+`;
+
+exports[`App Components Render Correctly LeaveButton renders correctly 1`] = `null`;
+
+exports[`App Components Render Correctly Mission renders correctly when joined is false 1`] = `
+<tr>
+  <td />
+  <td />
+</tr>
+`;
+
+exports[`App Components Render Correctly Mission renders correctly when joined is true 1`] = `
+<tr>
+  <td />
+  <td />
+</tr>
+`;
+
+exports[`App Components Render Correctly MissionFalse renders correctly 1`] = `null`;
+
+exports[`App Components Render Correctly MissionTrue renders correctly 1`] = `null`;
+
+exports[`App Components Render Correctly Missions renders correctly with empty store 1`] = `null`;
+
+exports[`App Components Render Correctly Profile renders correctly with empty store 1`] = `null`;
+
+exports[`App Components Render Correctly ReserveBadge renders correctly 1`] = `
+<span
+  className="sc-bczRLJ UMZIj"
+>
+  Reserved
+</span>
+`;
+
+exports[`App Components Render Correctly ReserveButton renders correctly 1`] = `null`;
+
+exports[`App Components Render Correctly Rocket card renders correctly when joined is false 1`] = `
+<div
+  className="sc-gsnTZi fBTMkP"
+>
+  <div
+    className="sc-dkzDqf hkBpzE"
+  >
+    <img
+      alt=""
+      src=""
+    />
+  </div>
+  <div
+    className="sc-hKMtZM kgqlvy"
+  >
+    <h3 />
+    <p>
+      <span />
+    </p>
+  </div>
+</div>
+`;
+
+exports[`App Components Render Correctly Rocket card renders correctly when joined is true 1`] = `
+<div
+  className="sc-gsnTZi fBTMkP"
+>
+  <div
+    className="sc-dkzDqf hkBpzE"
+  >
+    <img
+      alt=""
+      src=""
+    />
+  </div>
+  <div
+    className="sc-hKMtZM kgqlvy"
+  >
+    <h3 />
+    <p>
+      <span />
+    </p>
+  </div>
+</div>
+`;
+
+exports[`App Components Render Correctly Rockets renders correctly with empty store 1`] = `null`;
