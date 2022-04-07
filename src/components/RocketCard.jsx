@@ -48,21 +48,18 @@ const RocketCard = (props) => {
         <h3>{rocketName}</h3>
         <p>
           <span>
-            {(() => {
-              if (reserved) {
-                return <ReserveBadge />;
-              }
-              return '';
-            })()}
+            {reserved && (
+              <ReserveBadge />
+            )}
           </span>
           {description}
         </p>
-        {(() => {
-          if (reserved) {
-            return <LeaveButton id={id} />;
-          }
-          return <ReserveButton id={id} />;
-        })()}
+        {reserved && (
+        <LeaveButton id={id} />
+        )}
+        {!reserved && (
+        <ReserveButton id={id} />
+        )}
       </ContentDiv>
     </Wrapper>
   );
