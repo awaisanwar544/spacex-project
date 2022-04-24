@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://awaisanwar544.github.io/spacex-project/)
+[Live Demo Link](https://sweet-biscotti-fa21dd.netlify.app)
 ## Requisites
 node v16.13
 npm v8.3
